@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Виселица</title>
+</head>
+<body>
+<h1>Виселица!</h1>
+
+<script>
+	var words = ["программа", "бумага", "единорог", "макака", "ноутбук", "принтер"];
+	var word = words[Math.floor(Math.random() * words.length)];
+	
+	var answerArray = [];
+	for (var i = 0; i < word.length; i++) {
+		answerArray[i] = "_"
+	}
+	alert("Привет,  это игра Виселица. Здесь надо угадывать слова по буквам. Она еще не закончена, но работает нормально.");
+var gamerName = prompt("Как тебя зовут?")
+if (gamerName === "Даша") {
+alert("О! Моя любимая Дашулька играет!");
+}
+ var remaningLatters = word.length;
+ 
+
+ while (remaningLatters > 0){
+ 	alert(answerArray.join(" "));
+
+ 	var guess = prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
+ 	if (guess === null) {
+ 		alert("Пока!");
+ 		throw "stop";
+ 	} else if (guess === [0-99]) {
+ 		alert("Вы ввели цифру! Пожалуйста, введите букву.");
+ 	} else if (guess.length !== 1 ) {
+ 		alert("Пожалуйста, введите только одну букву!");
+ 	} else {
+
+ 		for (var j = 0; j < word.length; j++) {
+ 			if (word[j] === guess && answerArray[j] === "_") {
+              answerArray[j] = guess;
+              remaningLatters--;
+ 			} else if (word[j] === guess && answerArray[j] !== "_") {
+ 			 alert("Эта буква уже есть"); 
+            break;
+ 			}
+ 		}
+
+ 	}
+
+ }
+ alert (answerArray.join(" "));
+ if (gamerName === "Даша"){
+    alert("Дашка-милашка-любляшка, ты выиграла!! :* " )
+ } else {
+ 	alert ("Молодец, " + gamerName + "! Было загадано слово " + word);
+ }  
+
+
+</script>
+</body>
+</html>
