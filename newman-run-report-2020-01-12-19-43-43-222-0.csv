@@ -1,0 +1,4 @@
+iteration,collectionName,requestName,method,url,status,code,responseTime,responseSize,executed,failed,skipped
+"1","Temp collection","https://www.vk.com/","GET","https://www.vk.com/","OK","200","1799","10645","Status code is 200, Response time is less than 2000ms, Body matches string"
+"1","Temp collection","https://www.onliner.by/","GET","https://www.onliner.by/","OK","200","857","249838","Status code is 200, Response time is less than 2000ms, Body matches string"
+"1","Temp collection","https://www.tut.by/","GET","https://www.tut.by/","OK","200","407","263964","Status code is 200, Response time is less than 2000ms, Body matches string"
